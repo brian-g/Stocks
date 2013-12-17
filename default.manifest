@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# v0.36
+
+# Explicitly cached 'master entries'.
+CACHE:
+img/ajax-loader.gif
+img/icon-16.ico
+img/splash-320.png
+img/splash-640.png
+img/splash-768.png
+img/splash-1024.png
+img/splash-1593.png
+img/splash-2048.png
+img/winicon-144.png
+css/normalize.css
+font/fontello.eot
+font/fontello.svg
+font/fontello.ttf
+font/fontello.woff
+js/jquery.query-yql.min.js
+
+
+# Resources that require the user to be online.
+NETWORK:
+index.html
+*
+
+FALLBACK:

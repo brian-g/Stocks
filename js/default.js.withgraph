@@ -1,0 +1,280 @@
+"use strict";
+
+var magicEnv = 'store://datatables.org/alltableswithkeys';
+var magicStatement = 'select * from yahoo.finance.quotes where symbol in ';
+var delay = 100;
+
+var stocks = ['YHOO', 'AAPL', 'GOOG', 'MSFT', 'NOK', 'DIS', 'DJIA', 'HP', 'F', 'BP', 'BBY'];
+var charts = [];
+
+var intervalID;
+
+/*var xdata = [
+[1317888000000,372.5101,375,372.2,372.52],
+[1317888060000,372.4,373,372.01,372.16],
+[1317888120000,372.16,372.4,371.39,371.62],
+[1317888180000,371.62,372.16,371.55,371.75],
+[1317888240000,371.75,372.4,371.57,372],
+[1317888300000,372,372.3,371.8,372.24],
+[1317888360000,372.22,372.45,372.22,372.3],
+[1317888420000,372.3,373.25,372.3,373.15],
+[1317888480000,373.01,373.5,373,373.24],
+[1317888540000,373.36,373.88,373.19,373.88],
+[1317888600000,373.8,374.34,373.75,374.29],
+[1317888660000,374.29,374.43,374,374.01],
+[1317888720000,374.05,374.35,373.76,374.35],
+[1317888780000,374.41,375.24,374.37,374.9],				
+[1317888840000,374.83,375.73,374.81,374.96],
+[1317888900000,374.81,375.4,374.81,375.25],
+[1317888960000,375.2,375.7,375.14,375.19],
+[1317889020000,375.43,375.43,374.75,374.76],
+[1317889080000,374.94,375.5,374.81,375.13],
+[1317889140000,375.12,375.48,375,375.04],
+[1317889200000,375.24,375.24,375,375.08],
+[1317889260000,375.16,375.16,374.51,374.51],
+[1317889320000,374.51,374.75,374.2,374.27],
+[1317889380000,374.22,374.55,373.83,374.55]
+
+];
+*/
+var xdata = [
+	[1294012800000,329.57],
+	[1294099200000,331.29],
+	[1294185600000,334],
+	[1294272000000,333.73],
+	[1294358400000,336.12],
+	[1294617600000,342.45],
+	[1294704000000,341.64],
+	[1294790400000,344.42],
+	[1294876800000,345.68],
+	[1294963200000,348.48],
+	[1295308800000,340.65],
+	[1295395200000,338.84],
+	[1295481600000,332.68],
+	[1295568000000,326.72],
+	[1295827200000,337.45],
+	[1295913600000,341.4],
+	[1296000000000,343.85],
+	[1296086400000,343.21],
+	[1296172800000,336.1],
+	[1296432000000,339.32]
+];
+
+function construct_statement() {
+	
+	var s = '(';
+	jQuery.each(stocks, function(i, el) {
+		s += '"' + el + '"' + (  (i < stocks.length - 1) ? ',' : '' );
+	});
+	return (s += ')');
+	
+}
+
+function getChart_data(symbol, chart) {
+
+	var statement = 'select * from yahoo.finance.historicaldata where symbol = "' + symbol + 
+						'" and startDate = "2012-01-01" and endDate = "2012-07-31" | sort(field="Date")';
+	
+	var series = chart.series[0];
+	var stock_data = [];
+
+	chart.showLoading();	
+	$.queryYQL(statement, magicEnv, function(data) {
+		if (data.error)
+		{
+			alert(data.error.description);
+		}
+		else if (data.query.count > 0)
+		{
+			jQuery.each(data.query.results.quote, function(i, el) {
+				var p = [];
+				var d = new Date(el.Date);
+				p.push(d.valueOf());
+				p.push(parseFloat(el.Close));
+				stock_data.push( p );
+			});
+		}
+		chart.hideLoading();
+		series.setData(stock_data);
+
+	});
+
+}
+
+function init_charts() {
+
+	$('.stock').each(function() {
+		var rt = $(this).find('.stock-ChartContainer');
+		var stock = $(this).attr('data-id');	
+	});
+}
+
+
+function Xinit_charts() {
+
+
+	$('.stock').each(function() {
+		var rt = $(this).find('.stock-ChartContainer').get(0);
+		var stock = $(this).attr('data-id');
+		var c = new Highcharts.StockChart({
+		     chart: {
+		         renderTo : rt,
+		         spacingTop: 0,
+		         spacingBottom: 0,
+		         spacingLeft: 0,
+		         spacingRight: 0,
+		         style: {
+		         	fontFamily: 'source-sans-pro',
+		         	fontSize: '12px'
+		         }
+		     },
+		     loading: {
+		     	labelStyle : {
+		     		'font-weight': '400',
+		     		'font-family': "source-sans-pro",
+		     		'font-size': '12px'
+		     	}
+		     },
+		     panning: false,
+		     colors: [ '#009999', '#1d7373', '#006363', '#33cccc', '#5ccccc' ],
+		     title: {
+		         enabled: false
+		     },
+		     reflow: false,
+		     credits: {
+		         enabled: false
+		     },
+		     rangeSelector : {
+		         enabled: false
+		     },
+		     scrollbar : {
+		         enabled: false
+		     },
+		     navigator : {
+		         enabled: false
+		     },       
+		     exporting : {
+		         enabled: false
+		     },
+		     xAxis : {
+		     	lineColor: '#ccc',
+		     },
+		     series : [{
+		         name : stock,
+// http://jsfiddle.net/3uyJz/
+				 data: xdata, 
+		         tooltip: {
+		             valueDecimals: 2
+		         }
+		     }]
+		});		
+		charts[stock] = c;
+//		getChart_data(stock, c);  
+	});
+}
+
+function update_stocks() {
+	var statement = magicStatement + construct_statement();
+	
+	console.log('update_stocks');
+	
+	$.queryYQL(statement, magicEnv, function(data) {
+		if (data.error)
+		{
+			console.log(data.error.description);
+		}
+		else if (data.query.count > 0)
+		{
+			jQuery.each(data.query.results.quote, function(i, v) {
+				var e = $('.stock[data-id=' + v.Symbol + ']');
+				e.find('.stock-Bid').innerText = v.Bid ? v.Bid : v.PreviousClose;
+				e.find('.stock-Change').attr('data-change-indicator', v.Change < 0 ? 'down' : 'up');
+				e.find('.stock-ChangePercent').innerText = v.PercentChange;
+				e.find('.stock-ChangeValue').innerText = v.Change;
+//				e.find('.stock-ChartContainer').css('background-image', '').css('background-image', "url(http://chart.finance.yahoo.com/z?s=" + v.Symbol + "&t=1d&z=s)");
+
+			});
+		}
+	});
+}
+
+function funky()
+{
+	$('.stock').addClass('show');
+	$('#activity').css('opacity','0');
+}
+
+function fill_stocks() {
+
+	var t = $('#stock-list').empty();
+	
+
+	var statement = magicStatement + construct_statement(); 
+		
+	$.queryYQL(statement, magicEnv, function(data) {
+
+		if (data.error)
+		{
+			console.log(data.error.description);
+			alert(data.error.description);
+			funky();
+		}
+		else if (data.query.count > 0)
+		{
+			$('#stock-template').tmpl(data.query.results.quote).appendTo(t);
+
+			var d = 0;			
+			$('.stock').each(function() {
+				$(this).css('transition-delay', d + 'ms');
+				d += delay;
+			});
+			
+//			setTimeout(funky, 400);			
+		}
+		else {
+			var p, v;
+			
+			console.log('something happened. not sure what');
+			for (p in data.query)
+			{
+				console.log(p + "=" + data[p]);
+			}
+			funky();
+		}
+	});
+
+}
+
+function init_storage() {
+	if(typeof(Storage)!=="undefined") {
+	
+		if (localStorage.stocks !== undefined)
+		{
+			stocks = JSON.parse(localStorage.stocks);
+		}
+		else 
+		{
+			localStorage.stocks = JSON.stringify(stocks);
+		}
+	}
+	else 
+	{
+		console.log("no local storage");
+	}
+}
+
+$(document).ready(function() {
+
+//	charts = new Object();
+
+	// iOS doesn't like my CSS 
+	$('#activity').css('top', $(window).height() / 2 - 16);
+	$('#activity').css('left', $(window).width() / 2 - 16);	
+	$('#activity').css('opacity', '1.0');
+	
+	init_storage();
+	fill_stocks();
+
+//	intervalID = setInterval(update_stocks, 60000 * 5);
+
+});

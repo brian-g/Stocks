@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- <html manifest="http://brian.glaeske.name/Stocks/default.manifest" lang="en"> -->
+<html lang="en"> 
+<head>
+	<meta http-equiv="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<title>Stocks</title>
+	
+	
+	<link rel="icon" href="img/icon-16.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/icon-16.ico" type="image/x-icon" />
+	
+	<!-- Apple meta stuff -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Set full screen no address bar -->
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    
+    <!-- iPhone -->
+	<link rel="apple-touch-startup-image" media="(device-width:320px)" href="img/splash-320.png" />
+	<link rel="apple-touch-startup-image" media="(device-width:320px) and (-webkit-device-pixel-ratio: 2)" href="img/splash-640.png" />
+
+	<!-- iPad -->
+	<link rel="apple-touch-startup-image" media="(device-width:768px) and (orientation:portrait) and (-webkit-device-pixel-ratio: 1)" href="img/splash-768.png" />
+	<link rel="apple-touch-startup-image" media="(device-width:768px) and (orientation:landscape) and (-webkit-device-pixel-ratio: 1)" href="img/splash-1024.png" />		
+
+	<!-- iPad Retina -->
+	<link rel="apple-touch-startup-image" media="(device-width:768px) and (orientation:portrait) and (-webkit-device-pixel-ratio: 2)" href="img/splash-1593.png" />
+	<link rel="apple-touch-startup-image" media="(device-width:768px) and (orientation:landscape) and (-webkit-device-pixel-ratio: 2)" href="img/splash-2048.png" />	
+	
+		
+	<link rel="apple-touch-icon" href="img/icon-57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/icon-72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/icon-114.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/icon-144.png" />    
+
+	<!-- IE10 meta stuff -->
+	<meta name="application-name" content="Stocks" />
+	<meta name="msapplication-tooltip" content="Stocks" />
+
+	<meta name="msapplication-TileImage" content="img/win-icon.png" />
+	<meta name="msapplication-TileColor" content="#00FF00" />
+
+	<!-- Font Awesome - http://fortawesome.github.com/Font-Awesome -->
+	<link rel="stylesheet" href="font/font-awesome.css">
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/default.css">
+
+	<!-- TypeKit -->
+	<script type="text/javascript" src="http://use.typekit.net/khe4wld.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>	
+
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script src="js/jquery.query-yql.min.js"></script>
+	<script src="js/knockout-latest.js"></script>
+
+<script>
+
+var myViewModel = { 
+	personName: "Bob",
+	personAge: 123
+}
+
+var items = [
+	{ itemName: "one" },
+	{ itemName: "two" },
+	{ itemName: "three" },
+	{ itemName: "4" }
+];
+
+$(document).ready(function() {
+	ko.applyBindings(myViewModel);
+	
+	ko.applyBindings(items);
+
+})
+
+</script>
+	
+</head>
+<body>
+	<div data-view-model="myViewModel">
+		<span>The name of the person is: </span><span data-bind="text: personName"></span>
+	</div>
+	<div data-view-model="items">
+		<ul data-bind="foreach: items">
+			<li data-bind="text: itemName"></li>
+		</ul>
+	</div>
+</body>
+</html>
