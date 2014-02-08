@@ -2,6 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
+    "\/Stock.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/Stock.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/less\/default.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/default.less",
@@ -18,15 +27,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/Stock.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/Stock.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/js\/jquery.query-yql.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -50,33 +50,26 @@
       "initialSize" : 97829,
       "fileType" : 8192
     },
-    "\/test.html" : {
+    "\/img\/icon-57.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/css\/default.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/default.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/img\/splash-768.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/splash-768.png",
+      "inputAbbreviatedPath" : "\/img\/icon-57.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/splash-768.png",
-      "initialSize" : 35685,
+      "outputAbbreviatedPath" : "\/img\/icon-57.png",
+      "initialSize" : 3635,
+      "fileType" : 8192
+    },
+    "\/img\/icon-72.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/icon-72.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icon-72.png",
+      "initialSize" : 4025,
       "fileType" : 8192
     },
     "\/js\/knockout-latest.js" : {
@@ -90,6 +83,15 @@
       "outputAbbreviatedPath" : "\/js\/knockout-latest-ck.js",
       "fileType" : 64
     },
+    "\/css\/default.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/default.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/img\/splash-1593.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -101,16 +103,14 @@
       "initialSize" : 96014,
       "fileType" : 8192
     },
-    "\/img\/icon-57.png" : {
+    "\/test.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icon-57.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icon-57.png",
-      "initialSize" : 3635,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/ko.html" : {
       "ignoreWasSetByUser" : 0,
@@ -121,17 +121,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/img\/icon-72.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icon-72.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icon-72.png",
-      "initialSize" : 4025,
-      "fileType" : 8192
-    },
     "\/img\/icon-16.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -141,6 +130,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/icon-16.png",
       "initialSize" : 2644,
+      "fileType" : 8192
+    },
+    "\/img\/splash-768.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/splash-768.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/splash-768.png",
+      "initialSize" : 35685,
       "fileType" : 8192
     },
     "\/js\/stock-template.js" : {
