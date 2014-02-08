@@ -2,6 +2,23 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
+    "\/less\/default.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/default.less",
+      "outputAbbreviatedPath" : "\/css\/default.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
     "\/Stock.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -33,27 +50,23 @@
       "initialSize" : 97829,
       "fileType" : 8192
     },
-    "\/img\/icon-57.png" : {
+    "\/test.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icon-57.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icon-57.png",
-      "initialSize" : 3635,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
-    "\/img\/icon-72.png" : {
+    "\/css\/default.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icon-72.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icon-72.png",
-      "initialSize" : 4025,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/css\/default.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/splash-768.png" : {
       "ignoreWasSetByUser" : 0,
@@ -88,14 +101,16 @@
       "initialSize" : 96014,
       "fileType" : 8192
     },
-    "\/css\/default.css" : {
+    "\/img\/icon-57.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/default.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/img\/icon-57.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icon-57.png",
+      "initialSize" : 3635,
+      "fileType" : 8192
     },
     "\/ko.html" : {
       "ignoreWasSetByUser" : 0,
@@ -105,6 +120,17 @@
       "inputAbbreviatedPath" : "\/ko.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/img\/icon-72.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/icon-72.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icon-72.png",
+      "initialSize" : 4025,
+      "fileType" : 8192
     },
     "\/img\/icon-16.png" : {
       "ignoreWasSetByUser" : 0,
@@ -116,15 +142,6 @@
       "outputAbbreviatedPath" : "\/img\/icon-16.png",
       "initialSize" : 2644,
       "fileType" : 8192
-    },
-    "\/test.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/js\/stock-template.js" : {
       "ignoreWasSetByUser" : 0,
@@ -192,28 +209,6 @@
       "initialSize" : 5643,
       "fileType" : 8192
     },
-    "\/js\/Junk-ck.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/Junk-ck.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/Junk-ck-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/Junk.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/Junk.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/Junk-ck.js",
-      "fileType" : 64
-    },
     "\/Colors.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -231,15 +226,6 @@
       "inputAbbreviatedPath" : "\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/css\/normalize.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/normalize.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/js\/default.js" : {
       "ignoreWasSetByUser" : 1,
@@ -372,28 +358,27 @@
       "curly" : 1,
       "trailing" : 1,
       "nonew" : 1,
-      "withstmt" : 0,
+      "es3" : 0,
       "yui" : 0,
+      "freeze" : 1,
       "mootools" : 0,
       "proto" : 0,
       "boss" : 0,
       "funcscope" : 0,
-      "regexdash" : 0,
       "jquery" : 1,
       "esnext" : 0,
       "camelcase" : 0,
-      "es5" : 0,
       "dojo" : 0,
       "strict" : 0,
       "devel" : 0,
-      "onecase" : 0,
       "wsh" : 0,
       "nonstandard" : 0,
       "asi" : 0,
-      "smarttabs" : 0,
+      "moz" : 0,
       "rhino" : 0,
-      "noempty" : 0,
+      "smarttabs" : 0,
       "lastsemic" : 0,
+      "noempty" : 0,
       "eqnull" : 0,
       "eqeqeq" : 1,
       "couch" : 0,
@@ -410,6 +395,7 @@
       "unused" : 1,
       "debug" : 0,
       "bitwise" : 1,
+      "notypeof" : 1,
       "white" : 0,
       "browser" : 1,
       "worker" : 0,
@@ -417,12 +403,11 @@
       "multistr" : 0,
       "shadow" : 0,
       "sub" : 0,
-      "regexp" : 1,
+      "plusplus" : 0,
       "scripturl" : 0,
       "forin" : 0,
       "loopfunc" : 0,
-      "laxbreak" : 0,
-      "plusplus" : 0
+      "laxbreak" : 0
     },
     "jsLintFlags" : {
       "white" : 0,
