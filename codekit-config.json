@@ -28,17 +28,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/js\/jquery.query-yql.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.query-yql.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.query-yql.min-ck.js",
-      "fileType" : 64
-    },
     "\/img\/splash-2048.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -72,25 +61,25 @@
       "initialSize" : 4025,
       "fileType" : 8192
     },
-    "\/js\/knockout-latest.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/knockout-latest.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/knockout-latest-ck.js",
-      "fileType" : 64
-    },
-    "\/css\/default.css" : {
+    "\/img\/splash-768.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/default.css",
+      "inputAbbreviatedPath" : "\/img\/splash-768.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/splash-768.png",
+      "initialSize" : 35685,
+      "fileType" : 8192
+    },
+    "\/test.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/test.html",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 2048
     },
     "\/img\/splash-1593.png" : {
       "ignoreWasSetByUser" : 0,
@@ -103,14 +92,14 @@
       "initialSize" : 96014,
       "fileType" : 8192
     },
-    "\/test.html" : {
+    "\/css\/default.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test.html",
+      "inputAbbreviatedPath" : "\/css\/default.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/ko.html" : {
       "ignoreWasSetByUser" : 0,
@@ -130,17 +119,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/icon-16.png",
       "initialSize" : 2644,
-      "fileType" : 8192
-    },
-    "\/img\/splash-768.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/splash-768.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/splash-768.png",
-      "initialSize" : 35685,
       "fileType" : 8192
     },
     "\/js\/stock-template.js" : {
@@ -270,17 +248,6 @@
       "outputAbbreviatedPath" : "\/img\/winicon-144.png",
       "initialSize" : 3986,
       "fileType" : 8192
-    },
-    "\/js\/jquery.query-yql.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.query-yql.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.query-yql-ck.js",
-      "fileType" : 64
     }
   },
   "manualImportLinks" : [
