@@ -1,3 +1,5 @@
+//@codekit-prepend "jquery.query-yql.js"
+
 // "use strict";
 
 var error_str = "Error retrieving stock information";
@@ -55,8 +57,8 @@ function update_stocks() {
 				var e = $('.stock[data-id=' + v.Symbol + ']');
 				var c;
 				var n;
-				
-				e.find('.stock-Bid').text(v.LastTradePriceOnly);
+
+				e.find('.stock-Bid').text(  Math.round(v.LastTradePriceOnly * 1000) / 1000 );
 				e.find('.stock-Change').attr('data-change-indicator', v.Change < 0 ? 'down' : 'up');
 				e.find('.stock-ChangePercent').text(v.PercentChange);
 				e.find('.stock-ChangeValue').text(v.Change);
